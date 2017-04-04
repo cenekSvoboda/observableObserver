@@ -2,7 +2,7 @@
 
 //Copyright 2017 Cenek mooph Svoboda, svobo.c@gmail.com
 
-//This file shows how to create object oriented directed graphs with example of solving cycles (recursion in object oriented graphs).
+//This file shows how to create directed object graphs with example of solving cycles (recursion in object graphs).
 //If asked, I'd probably call it "Observable Observer Pattern", because instances in this implementation are in both roles.
 
 error_reporting(E_ALL | E_STRICT);
