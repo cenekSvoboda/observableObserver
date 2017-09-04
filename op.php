@@ -96,5 +96,5 @@ $info1->huu="huu";
 //running that
 $o3->notifyObservers($info1);
 
-//the implementation could be more complex (for example there could be the function removeObserver), but I wanted to show the pattern, so let's keep it simple for now... if you want it more complete, contact me...
+//the implementation could be more complex (for example there could be the function removeObserver, setters and getters for infoInterface could be added), but I wanted to show the pattern, so let's keep it simple for now... if you want it more complete, contact me...
 ?>
