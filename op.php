@@ -36,7 +36,7 @@ abstract class observableAbstract implements observableInterface
 		}
 	}
 }
-abstract class observableObserverAbstract extends observableAbstract implements observableInterface, observerInterface
+abstract class observableObserverAbstract extends observableAbstract implements observerInterface
 {
 }
 
