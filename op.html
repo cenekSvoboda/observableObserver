@@ -1,0 +1,49 @@
+<html>
+<head>
+</head>
+<body>
+	<div id="output">
+	</div>
+	<script type="text/javascript">
+
+		class observableObserver {
+			constructor(){
+				this.observers = [];
+			}
+			addObserver(observerObject){
+				this.observers.push(observerObject);
+			};
+			processInfo(info){
+				if(this.counter){
+					console.log("counter = "+this.counter);
+					--this.counter;
+					console.log(info);
+					if(this.counter===0) {
+						return;
+					}
+					this.notifyObservers(info);
+				}else{
+					console.log(info);
+					this.notifyObservers(info);
+				}
+			}
+			notifyObservers(info){
+				for(var obs in this.observers) {
+					this.observers[obs].processInfo(info);
+				}
+			}
+
+		}
+
+		var ob1 = new observableObserver();
+		var ob2 = new observableObserver();
+		var ob3 = new observableObserver();
+		ob1.counter=10;
+		ob1.addObserver(ob2);
+		ob2.addObserver(ob3);
+		ob3.addObserver(ob1);
+		ob3.notifyObservers({"test":"test"});
+
+	</script>
+</body>
+</html>
